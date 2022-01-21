@@ -1,0 +1,13 @@
+@import "vars";
+
+@function get-color($name){
+  @return map-get($colors, $name);
+}
+
+@function get-var($key){
+  @return map-get($vars, $key);
+}
+
+@function get-val($map, $key){
+  @return map-get($map, $key);
+}

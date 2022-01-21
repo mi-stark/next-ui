@@ -1,0 +1,37 @@
+
+$colors : (
+        primary: #67a8e4,
+        secondary: #6c757d,
+        success: #4ac18e,
+        info: #3bc3e9,
+        warning: #fb4,
+        danger: #ea553d,
+        dark: #343a40,
+        light: #f3f3f3,
+        purple: #6d60b0,
+        pink: #f06292,
+        brown: #8d6e63,
+        grey: #90a4ae,
+        desc: #6c757d,
+        regular: #6c757d,
+        border: #eee,
+        scroll-bar: #909399
+);
+
+$duration-fast: 0.2s;
+$duration-default: 0.3s;
+$ease-in-out-bezier: cubic-bezier(0.645, 0.045, 0.355, 1);
+$fast-bezier: cubic-bezier(0.23, 1, 0.32, 1);
+
+
+$vars: (
+        transition-duration: $duration-default,
+        transition-duration-fast: $duration-fast,
+        transition-fade-linear: opacity $duration-fast linear,
+        transition-md-fade: (
+                transform $duration-fast $fast-bezier,
+                opacity $duration-default $fast-bezier,
+        ),
+        fixed-box-shadow: 0 0 10px rgba(0, 0, 0, 0.12)
+);
+

@@ -1,0 +1,108 @@
+@import "functions";
+
+.fade-in-linear-enter-active,
+.fade-in-linear-leave-active {
+  transition: get-var(transition-fade-linear);
+}
+
+.fade-in-linear-enter-from,
+.fade-in-linear-leave-to {
+  opacity: 0;
+}
+
+.fade-in-linear-enter-active,
+.fade-in-linear-leave-active {
+  transition: get-var(transition-fade-linear);
+}
+.fade-in-linear-enter-from,
+.fade-in-linear-leave-to {
+  opacity: 0;
+}
+
+.fade-in-enter-active,
+.fade-in-leave-active {
+  transition: all get-var(transition-duration) cubic-bezier(0.55, 0, 0.1, 1);
+}
+.fade-in-enter-from,
+.fade-in-leave-active {
+  opacity: 0;
+}
+
+.zoom-in-center-enter-active,
+.zoom-in-center-leave-active {
+  transition: all get-var(transition-duration) cubic-bezier(0.55, 0, 0.1, 1);
+}
+.zoom-in-center-enter-from,
+.zoom-in-center-leave-active {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.zoom-in-top-enter-active,
+.zoom-in-top-leave-active {
+  opacity: 1;
+  transform: scaleY(1);
+  transition: get-var(transition-md-fade);
+  transform-origin: center top;
+
+  &[data-popper-placement^='top'] {
+    transform-origin: center bottom;
+  }
+}
+.zoom-in-top-enter-from,
+.zoom-in-top-leave-active {
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.zoom-in-bottom-enter-active,
+.zoom-in-bottom-leave-active {
+  opacity: 1;
+  transform: scaleY(1);
+  transition: get-var(transition-md-fade);
+  transform-origin: center bottom;
+}
+.zoom-in-bottom-enter-from,
+.zoom-in-bottom-leave-active {
+  opacity: 0;
+  transform: scaleY(0);
+}
+
+.zoom-in-left-enter-active,
+.zoom-in-left-leave-active {
+  opacity: 1;
+  transform: scale(1, 1);
+  transition: get-var(transition-md-fade);
+  transform-origin: top left;
+}
+.zoom-in-left-enter-from,
+.zoom-in-left-leave-active {
+  opacity: 0;
+  transform: scale(0.45, 0.45);
+}
+
+.collapse-transition {
+  transition: (get-var(transition-duration) height ease-in-out,
+  get-var(transition-duration) padding-top ease-in-out,
+  get-var(transition-duration) padding-bottom ease-in-out);
+}
+.horizontal-collapse-transition {
+  transition: (get-var(transition-duration) width ease-in-out,
+    get-var(transition-duration) padding-left ease-in-out,
+    get-var(transition-duration) padding-right ease-in-out);
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 1s;
+}
+.list-enter-from,
+.list-leave-active {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.opacity-transition {
+  transition: opacity get-var(transition-duration)
+    cubic-bezier(0.55, 0, 0.1, 1);
+}
